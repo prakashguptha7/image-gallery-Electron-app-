@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Handlebar</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/lightbox.min.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script id="image-template" type="text/x-handlebars-template">
+        <div class="jumbotron">
+            <h1 class="display-4">Image-Gallary</h1>
+            </div>
+        <div class="gallary">
+            <a href="images/1.jpg" data-lightbox="mygallary" data-title="Animal"><img src="{{image1}}"></a>
+            <a href="images/2.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image2}}"></a>
+            <a href="images/3.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image3}}"></a>
+            <a href="images/4.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image4}}"></a>
+            <a href="images/5.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image5}}"></a>
+            <a href="images/6.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image6}}"></a>
+            <a href="images/7.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image7}}"></a>
+            <a href="images/8.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image8}}"></a>
+            <a href="images/9.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image9}}"></a>
+            <a href="images/10.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image10}}"></a>
+            <a href="images/11.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image11}}"></a>
+            <a href="images/12.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image12}}"></a>
+            <a href="images/13.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image13}}"></a>
+            <a href="images/14.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image14}}"></a>
+            <a href="images/15.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image15}}"></a>
+            <a href="images/16.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image16}}"></a>
+            <a href="images/17.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image17}}"></a>
+            <a href="images/18.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image18}}"></a>
+            <a href="images/19.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image19}}"></a>
+            <a href="images/20.jpg"data-lightbox="mygallary" data-title="Animal"><img src="{{image20}}"></a>
+    
+        </div>
+        <nav aria-label="..." class="page">
+                <ul class="pagination pagination-lg">
+                  <li class="page-item ">
+                    <a class="page-link" href="index1.html" >1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+                  <li class="page-item disabled"><a class="page-link" href="index3.html" tabindex="-1">3</a></li>
+                </ul>
+              </nav>
+    
+       
+      </script>
+      
+     
+      <div class="content-placeholder"></div>
+
+
+      <script>
+          $(function () {
+  
+  var theTemplateScript = $("#image-template").html();
+
+  
+  var theTemplate = Handlebars.compile(theTemplateScript);
+
+  
+  var images ={
+   
+    "image1": "images/1.jpg",
+    "image2": "images/2.jpg",
+    "image3": "images/3.jpg",
+    "image4": "images/4.jpg",
+    "image5": "images/5.jpg",   
+    "image6": "images/6.jpg",
+    "image7": "images/7.jpg",
+    "image8": "images/8.jpg",
+    "image9": "images/9.jpg",
+    "image10": "images/10.jpg",
+    "image11": "images/11.jpg",
+    "image12": "images/12.jpg",
+    "image13": "images/13.jpg",
+    "image14": "images/14.jpg",
+    "image15": "images/15.jpg",
+    "image16": "images/16.jpg",
+     "image17": "images/17.jpg",
+    "image18": "images/18.jpg",
+    "image19": "images/19.jpg",
+    "image20": "images/20.jpg"
+    
+  };
+
+  
+  var theCompiledHtml = theTemplate(images);
+
+  
+  $('.content-placeholder').html(theCompiledHtml);
+});
+
+      </script>
+
+
+
+
+</body>
+
+</html>
